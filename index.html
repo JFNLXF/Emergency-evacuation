@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html style="height: 100%">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body style="height: 100%; margin: 0">
+        <div id="container" style="height: 100%"></div>
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="echarts.min.js"></script>
+        <script type="text/javascript">
+
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+
+var option;
+
+
+//var ROOT_PATH = 'https://cdn.jsdelivr.net/gh/apache/echarts-website@asf-site/examples'
+
+$.get(
+  //ROOT_PATH + '/data/asset/geo/MacOdrum-LV5-floorplan-web.svg',
+    
+  'finalshow.svg',
+  function (svg) {
+    echarts.registerMap('MacOdrum-LV5-floorplan-web.svg', { svg: svg });
+    option = {
+      title: {
+        text: 'Emergency evacuation',
+        left: 'center',
+        bottom: 5
+      },
+      //tooltip: {},
+      geo: {
+        map: 'MacOdrum-LV5-floorplan-web.svg',
+        roam: true,
+        emphasis: {
+          itemStyle: {
+            color: undefined
+          },
+          label: {
+            show: false
+          }
+        }
+      },
+      series: [
+        {
+          name: 'Route',
+          type: 'lines',
+          coordinateSystem: 'geo',
+          geoIndex: 0,
+          emphasis: {
+            label: {
+              show: false
+            }
+          },
+          polyline: true,
+          lineStyle: {
+            color: '#00FF00',
+            width: 0,
+            opacity: 1,
+            type: 'dotted'
+          },
+          effect: {
+            show: true,
+            period: 8,
+            color: '#FF0000',
+            constantSpeed: 70,
+            trailLength: 0,
+            symbolSize: [20, 12],
+            symbol:
+              'path://M35.5 40.5c0-22.16 17.84-40 40-40s40 17.84 40 40c0 1.6939-.1042 3.3626-.3067 5H35.8067c-.2025-1.6374-.3067-3.3061-.3067-5zm90.9621-2.6663c-.62-1.4856-.9621-3.1182-.9621-4.8337 0-6.925 5.575-12.5 12.5-12.5s12.5 5.575 12.5 12.5a12.685 12.685 0 0 1-.1529 1.9691l.9537.5506-15.6454 27.0986-.1554-.0897V65.5h-28.7285c-7.318 9.1548-18.587 15-31.2715 15s-23.9535-5.8452-31.2715-15H15.5v-2.8059l-.0937.0437-8.8727-19.0274C2.912 41.5258.5 37.5549.5 33c0-6.925 5.575-12.5 12.5-12.5S25.5 26.075 25.5 33c0 .9035-.0949 1.784-.2753 2.6321L29.8262 45.5h92.2098z'
+          },
+          data: [
+            {//[X,Y]
+              effect: {
+              color: '#FF0000',
+              constantSpeed: 100,
+              delay: 0
+            },
+              coords: [
+             [1716.02,414.91],
+             [1720.10,256.61],
+             [1025.63,249.468],
+             [1018.48,121.808]
+              ]
+            },
+            {//[X,Y]
+                    effect: {
+              color: '#FF0000',
+              constantSpeed: 80,
+              delay: 0
+            },
+              coords: [
+             [1716.02,414.91],
+             [1720.10,256.61],
+             [1025.63,249.468],
+             [1018.48,121.808]
+              ]
+            },//
+            {effect: {
+              color: '#FF0000',
+              constantSpeed: 80,
+              delay: 0
+            },
+              coords: [
+            [1794.65,192.27],
+            [1787.51,254.57],
+            [1025.63,249.46],
+            [1025.63,249.46],
+            [1018.48,121.808]
+              ]
+            },
+            //
+            {effect: {
+              color: '#FF0000',
+              constantSpeed: 80,
+              delay: 0
+            },
+              coords: [
+            [1687.42,184.10],
+            [1657.80,257.638],
+            [1025.63,257.638],
+            [1025.63,121.808]
+              ]
+            },
+            //
+            {effect: {
+              color: '#FF0000',
+              constantSpeed: 80,
+              delay: 0
+            },
+              coords: [
+            [1555.68,175.93],
+            [1562.82,260.702],
+            [1025.63,257.638],
+            [1025.63,121.808]
+              ]
+            },
+            //
+            {effect: {
+              color: '#FF0000',
+              constantSpeed: 100,
+              delay: 0
+            },
+              coords: [
+            [1555.68,175.93],
+            [1562.82,260.702],
+            [1025.63,257.638],
+            [1025.63,121.808]
+              ]
+            },
+            //
+            {effect: {
+              color: '#FF0000',
+              constantSpeed: 100,
+              delay: 0
+            },
+              coords: [
+            [1658.82,349.55],
+            [1657.8,257.63],
+            [1025.63,257.638],
+            [1025.63,121.808]
+              ]
+            },
+            //
+            {effect: {
+              color: '#FF0000',
+              constantSpeed: 100,
+              delay: 0
+            },
+              coords: [
+            [1420.87,348.53],
+            [1416.7,262.74],
+            [1025.63,257.638],
+            [1025.63,121.808]
+              ]
+            },
+            //
+            {effect: {
+              color: '#FF0000',
+              constantSpeed: 100,
+              delay: 0
+            },
+              coords: [
+            [1287.08,331.170],
+            [1288.10,263.765],
+            [1025.63,257.638],
+            [1025.63,121.808]
+              ]
+            },
+            //
+            {effect: {
+              color: '#FF0000',
+              constantSpeed: 100,
+              delay: 0
+            },
+              coords: [
+            [1287.08,331.170],
+            [1288.10,263.765],
+            [1025.63,257.638],
+            [1025.63,121.808]
+              ]
+            },
+            //
+            {effect: {
+              color: '#FF0000',
+              constantSpeed: 100,
+              delay: 0
+            },
+              coords: [
+            [980.702,316.872],
+            [999.085,264.787],
+            [1025.63,257.638],
+            [1025.63,121.808]
+              ]
+            },
+            //建筑物左侧
+            {effect: {
+              color: '#005ACE',
+              constantSpeed: 60,
+              delay: 0
+            },
+              coords: [
+            [118.744,197.38],
+            [117.72,257.638],
+            [75.851,300.531],
+            [81.978,366.914]
+              ]
+            },
+            //
+            {effect: {
+              color: '#005ACE',
+              constantSpeed: 60,
+              delay: 0
+            },
+              coords: [
+            [224.659,325.91],
+            [220.574,271.78],
+            [80.65,275.872],
+            [81.978,366.914]
+              ]
+            },
+            //
+            {effect: {
+              color: '#005ACE',
+              constantSpeed: 60,
+              delay: 0
+            },
+              coords: [
+            [362.53,338.17],
+            [351.29,280.978],
+            [80.65,275.872],
+            [81.978,366.914]
+              ]
+            },
+            //
+            {effect: {
+              color: '#005ACE',
+              constantSpeed: 80,
+              delay: 0
+            },
+              coords: [
+            [260.40,188.042],
+            [253.255,242.170],
+            [80.65,275.872],
+            [81.978,366.914]
+              ]
+            },
+            //
+            {effect: {
+              color: '#005ACE',
+              constantSpeed: 70,
+              delay: 0
+            },
+              coords: [
+            [412.574,183.95],
+            [401.340,243.191],
+            [80.65,275.872],
+            [81.978,366.914]
+              ]
+            },
+            //
+            {effect: {
+              color: '#005ACE',
+              constantSpeed: 90,
+              delay: 0
+            },
+              coords: [
+            [564.74,188.042],
+            [541.25,242.170],
+            [80.65,275.872],
+            [81.978,366.914]
+              ]
+            },
+            //
+            {effect: {
+              color: '#005ACE',
+              constantSpeed: 90,
+              delay: 0
+            },
+              coords: [
+            [567.808,322.851],
+            [518.787,272.808],
+            [80.65,275.872],
+            [81.978,366.914]
+              ]
+            },
+            //
+            {effect: {
+              color: '#005ACE',
+              constantSpeed: 90,
+              delay: 0
+            },
+              coords: [
+            [783.297,338.170],
+            [835.38,266.680],
+            [1011.04,234],
+            [1022.27,125.74]
+              ]
+            },
+            //
+            {effect: {
+              color: '#005ACE',
+              constantSpeed: 90,
+              delay: 0
+            },
+              coords: [
+            [676.06,325.914],
+            [717.936,269.74],
+            [1011.04,234],
+            [1022.27,125.74]
+              ]
+            },
+            //
+            {effect: {
+              color: '#005ACE',
+              constantSpeed: 90,
+              delay: 0
+            },
+              coords: [
+            [681.17,195.191],
+            [765.936,256.468],
+            [1011.04,234],
+            [1022.27,125.74]
+              ]
+            },
+            //
+            {effect: {
+              color: '#005ACE',
+              constantSpeed: 90,
+              delay: 0
+            },
+              coords: [
+            [851.723,181.91],
+            [871.12,247.276],
+            [1011.04,234],
+            [1022.27,125.74]
+              ]
+            }
+            
+          ]
+        }
+      ]
+    };
+    myChart.setOption(option);
+  }
+);
+
+if (option && typeof option === 'object') {
+    myChart.setOption(option);
+}
+
+        </script>
+    </body>
+</html>
+    
